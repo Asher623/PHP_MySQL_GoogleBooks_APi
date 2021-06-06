@@ -12,9 +12,6 @@ Enter Title: <input type="text" name="titleName">
 </form>
 <br>
 
-
-
-
 <?php
 session_start();
 if (isset($_POST["titleName"])){
@@ -38,13 +35,9 @@ if (isset($_POST["titleName"])){
         $cover = $data['volumeInfo']['imageLinks']['thumbnail'];
         $price = array("price"=>$data['saleInfo']['listPrice']['amount'], "currency"=>$data['saleInfo']['listPrice']['currencyCode']);
 
-
-
         $bookInfo = array("title"=>$title, "author"=>$author,"cover"=>$cover,  "price"=>$price);
 
-
         $bookCover = $data['volumeInfo']['imageLinks']['thumbnail'];
-
 
         $_SESSION['bookInfo'] = $bookInfo;
         echo "<img src='".$bookCover."'/><br>";
@@ -55,9 +48,6 @@ if (isset($_POST["titleName"])){
     else{
         echo "There are no books for sale.";
     }
-
-
-    
 
 
 }
