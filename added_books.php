@@ -9,14 +9,13 @@
 
 <?php
 
-$servername = "localhost";
+    $servername = "localhost";
     $username = "root";
-    $password = "root";
+    $password = "";
     $dbase = "books";
     
     $conn =mysqli_connect($servername, $username, $password, $dbase);
     
-
     if($conn === false){
         die("ERROR: Could not connect. " . mysqli_connect_error());
     }
@@ -38,6 +37,5 @@ $servername = "localhost";
 
 ?>
 
-    
 </body>
 </html>
