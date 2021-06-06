@@ -4,7 +4,7 @@ if (isset($_POST['ajax']) && isset($_POST['book'])){
 
     $servername = "localhost";
     $username = "root";
-    $password = "root";
+    $password = "";
     $dbase = "books";
     
     $aBook = $_POST['book'];
@@ -14,7 +14,6 @@ if (isset($_POST['ajax']) && isset($_POST['book'])){
         die("ERROR: Could not connect. " . mysqli_connect_error());
     }
 
-    
     $sql = "INSERT INTO added_books (title, author, cover, price,currency) VALUES ('".$aBook['title']."', '".$aBook['author']."', '".$aBook['cover']."', '".$aBook['price']['price']."', '".$aBook['price']['currency']."')";
 
     if (mysqli_query($conn, $sql)) {
