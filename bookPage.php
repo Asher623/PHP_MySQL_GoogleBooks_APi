@@ -21,12 +21,10 @@
 
 ?>
 
-
 <script>
 
 $(function(){
 
-    
     $("form").submit(function(e){
         
         e.preventDefault();
@@ -39,10 +37,7 @@ $(function(){
                 $('#response').text("New book with title: " + response + " was successfully added to database.");
             }
         })
-        
-
     });
-
 });
 
 </script>
